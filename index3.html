@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <title>LGA様｜サイトデザイン案</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=1180">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon-precomposed">
+    <link rel="stylesheet" href="css/bootstrap4.css">
+    <link rel="stylesheet" href="css/bootstrap4-print.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/slider-pro.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="header03 d-flex justify-content-between scrollHeader">
+        <div class="logo"><img src="images/logo02.png" alt=""></div>
+        <div class="h-right"><img src="images/menu02.png" alt=""></div>
+    </div>
+
+    <div class="sp-box">
+        <div class="slider-pro" id="slider-ex">
+            <div class="sp-slides">
+                <div class="sp-slide">
+                    <img class="sp-image" src="images/main.jpg" />
+                </div>
+                <!-- <div class="sp-slide">
+                    <img class="sp-image" src="images/main02.jpg" />
+                </div>
+                <div class="sp-slide">
+                    <img class="sp-image" src="images/main03.jpg" />
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="cont01">
+        <div class="w1110"><img src="images/contents-text.png" alt=""></div>
+    </div>
+
+    <div id="pagetop"><a href="#"><img src="images/pagetop.jpg" alt=""></a></div>
+
+    <div id="side-btn"><a href="#"><img src="images/side-btn.png" alt=""></a></div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap4.bundle.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery.sliderPro.js"></script>
+    <script>
+        $(document).ready(function ($) {
+            $('#slider-ex').sliderPro({
+                width: '2000px',
+                height: '850px',
+                arrows: false,
+                buttons: true,
+                fadeArrows: false,
+                autoplay: true,
+                touchSwipe: false,
+                fade: true,
+                loop: true,
+                autoplayOnHover: 'none',
+                autoplayDelay: 5000,
+                fadeDuration: 1500,
+                breakpoints: {
+                    2000: {
+                        aspectRatio: 2.35
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- スクロールでヘッダー背景色表示 -->
+    <script>
+        var topZero = 0,
+            ScrollTop = 0;
+        $(window).on('scroll', function () {
+            ScrollTop = $(this).scrollTop();
+            if (ScrollTop > 200) {
+                $('.scrollHeader').addClass('hide03');
+            } else {
+                $('.scrollHeader').removeClass('hide03');
+            }
+            topZero = ScrollTop;
+        });
+    </script>
+
+</body>
+
+</html>
